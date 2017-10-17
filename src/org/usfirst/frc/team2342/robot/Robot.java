@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -54,6 +55,17 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopInit() {
+		//Jokes for your entertainment
+		SmartDashboard.putString("DB/String 0", "Q: Why did the student eat his homework?");
+		SmartDashboard.putString("DB/String 1", "A: Because his teacher said it was a peace of cake!");
+		SmartDashboard.putString("DB/String 2", "Q: How does Moses make his tea?");
+		SmartDashboard.putString("DB/String 3", "A: Hebrews it!");
+		SmartDashboard.putString("DB/String 4", "Q: What do you call a fake noodle?");
+		SmartDashboard.putString("DB/String 5", "A: An impasta!");
+		SmartDashboard.putString("DB/String 6", "Q: Why did the ghost ride the elevator?");
+		SmartDashboard.putString("DB/String 7", "A: To lift his spirits!");
+		SmartDashboard.putString("DB/String 8", "Q: What kind of shoes do artists wear?");
+		SmartDashboard.putString("DB/String 9", "A: Sketchers!");
 	}
 
 	/**
