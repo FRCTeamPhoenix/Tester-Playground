@@ -1,0 +1,47 @@
+{
+    "PortAssign" : {
+        "Talon" :
+        {
+            "types" : [],
+            "id" : []
+        },
+    
+        "Controllers" :
+        {
+                "types": [],
+                "id" : []
+        },
+    
+        "LimitSwitches" :
+        {
+                "types" : [],
+                "id" : []
+        }
+    },
+
+    "RobotConstants" : {
+        "types" : [],
+        "id" : []
+    },
+
+    "DSConstants" : {
+        "GamepadButtons" : 12,
+        
+        "ButtonNames" : {
+            "types" : [],
+            "id" : []
+        },
+
+        "ControlBox" : {
+            "types" : [],
+            "id" : []
+        },
+
+        "DriverControl" : {
+            "types" : [],
+            "id" : []
+        },
+
+    }
+}
+
