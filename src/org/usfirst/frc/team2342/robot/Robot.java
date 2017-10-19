@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends IterativeRobot {
 	RobotDrive myRobot = new RobotDrive(0, 1);
 	Joystick stick = new Joystick(0);
+	Joystick stick2 = new Joystick(1);
 	Timer timer = new Timer();
 
 	/**
@@ -55,17 +56,17 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopInit() {
-		//Jokes for your entertainment
-		SmartDashboard.putString("DB/String 0", "Q: Why did the student eat his homework?");
-		SmartDashboard.putString("DB/String 1", "A: Because his teacher said it was a peace of cake!");
-		SmartDashboard.putString("DB/String 2", "Q: How does Moses make his tea?");
-		SmartDashboard.putString("DB/String 3", "A: Hebrews it!");
-		SmartDashboard.putString("DB/String 4", "Q: What do you call a fake noodle?");
-		SmartDashboard.putString("DB/String 5", "A: An impasta!");
-		SmartDashboard.putString("DB/String 6", "Q: Why did the ghost ride the elevator?");
-		SmartDashboard.putString("DB/String 7", "A: To lift his spirits!");
-		SmartDashboard.putString("DB/String 8", "Q: What kind of shoes do artists wear?");
-		SmartDashboard.putString("DB/String 9", "A: Sketchers!");
+		//Memes for your entertainment
+		SmartDashboard.putString("DB/String 0", "D4NK M3M35 ACTIVATED");
+		SmartDashboard.putString("DB/String 1", "P3P3 ACTIVATED");
+		SmartDashboard.putString("DB/String 2", "GN0M3 CH1LD ACTIVATED");
+		SmartDashboard.putString("DB/String 3", "D0G3 ACTIVATED");
+		SmartDashboard.putString("DB/String 4", "5HR3K ACTIVATED");
+		SmartDashboard.putString("DB/String 5", "D4T B01 ACTIVATED");
+		SmartDashboard.putString("DB/String 6", "P1CKL3 R1CK ACTIVATED");
+		SmartDashboard.putString("DB/String 7", "MY N4M3 1S J3FF ACTIVATED");
+		SmartDashboard.putString("DB/String 8", "1llUM1N4T1 ACTIVATED");
+		SmartDashboard.putString("DB/String 9", "SN00P D0G ACTIVATED");
 	}
 
 	/**
@@ -73,7 +74,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		myRobot.arcadeDrive(stick);
+		myRobot.tankDrive(stick, stick2);
 	}
 
 	/**
