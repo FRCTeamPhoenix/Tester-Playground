@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
-	RobotDrive myRobot = new RobotDrive(0, 1);
+	RobotDrive myRobot = new RobotDrive(0, 3);
 	Joystick stick = new Joystick(0);
 	Joystick stick2 = new Joystick(1);
 	Timer timer = new Timer();
@@ -74,7 +74,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		myRobot.tankDrive(stick, stick2);
+		myRobot.tankDrive(-stick.getY() * 0.3, -stick2.getY() * 0.3);
 	}
 
 	/**
