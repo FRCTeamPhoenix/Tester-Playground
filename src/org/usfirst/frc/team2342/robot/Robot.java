@@ -2,6 +2,7 @@ package org.usfirst.frc.team2342.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Joystick.AxisType;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -56,17 +57,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopInit() {
-		//Memes for your entertainment
-		SmartDashboard.putString("DB/String 0", "D4NK M3M35 ACTIVATED");
-		SmartDashboard.putString("DB/String 1", "P3P3 ACTIVATED");
-		SmartDashboard.putString("DB/String 2", "GN0M3 CH1LD ACTIVATED");
-		SmartDashboard.putString("DB/String 3", "D0G3 ACTIVATED");
-		SmartDashboard.putString("DB/String 4", "5HR3K ACTIVATED");
-		SmartDashboard.putString("DB/String 5", "D4T B01 ACTIVATED");
-		SmartDashboard.putString("DB/String 6", "P1CKL3 R1CK ACTIVATED");
-		SmartDashboard.putString("DB/String 7", "MY N4M3 1S J3FF ACTIVATED");
-		SmartDashboard.putString("DB/String 8", "1llUM1N4T1 ACTIVATED");
-		SmartDashboard.putString("DB/String 9", "SN00P D0G ACTIVATED");
+		
 	}
 
 	/**
@@ -74,7 +65,13 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		myRobot.tankDrive(-stick.getY() * 0.3, -stick2.getY() * 0.3);
+		
+		
+		double moveFactor = (stick2.getAxis(AxisType.kThrottle) + 1)/2.0;
+		
+		SmartDashboard.putString("DB/String 0", "Move factor: " + moveFactor);
+		
+		myRobot.tankDrive(-stick.getY() * moveFactor, -stick2.getY()  * moveFactor);
 	}
 
 	/**
