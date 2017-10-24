@@ -2,7 +2,7 @@ package org.usfirst.frc.team2342.models;
 
 import java.util.List;
 
-public final class JsonData 
+public public final class JsonData 
 {
 	public PageInfo pageInfo;
 	public List<Post> posts;

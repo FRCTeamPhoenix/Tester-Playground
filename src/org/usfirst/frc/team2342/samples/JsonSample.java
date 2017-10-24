@@ -11,7 +11,7 @@ import java.util.Date;
 import org.usfirst.frc.team2342.models.*;
 
 public class JsonSample {
-	private static final ObjectMapper JACKSON = new ObjectMapper();
+	private static public final ObjectMapper JACKSON = new ObjectMapper();
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException 
 	{

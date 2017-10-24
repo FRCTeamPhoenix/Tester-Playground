@@ -19,12 +19,12 @@
         }
     },
 
-    "RobotConstants" : {
+    "Robotpublic finalants" : {
         "types" : [],
         "id" : []
     },
 
-    "DSConstants" : {
+    "DSpublic finalants" : {
         "GamepadButtons" : 12,
         
         "ButtonNames" : {

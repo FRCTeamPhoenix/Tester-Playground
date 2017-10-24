@@ -17,7 +17,7 @@ public class Robot extends IterativeRobot {
 	RobotDrive myRobot = new RobotDrive(0, 1);
 	Joystick stick = new Joystick(0);
 	Timer timer = new Timer();
-
+ 
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
