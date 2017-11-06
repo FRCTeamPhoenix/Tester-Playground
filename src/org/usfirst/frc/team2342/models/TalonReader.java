@@ -1,21 +1,26 @@
-package org.usfirst.frc.team2342.models;
 
 public class TalonReader {
-	private int id = 2;
-	private String name = "talon";
-	private double maxPower = 0.5;
+	private int id = 1;
+	private String name = "gearTalon";
+	private float maxPower = 0.5f;
 	
-	public int getId() {
-		return id;
-	}
+	public int getID(){
+		return id; 
+	} // gets id
 	
 	public String getName() {
 		return name;
-	}
+	} // gets name
 	
-	public double getMaxPower() {
+	public float getMaxPower() {
 		return maxPower;
-	}
+	} // gets max power
 	
+	public void setID(int newID) {
+		id = newID;
+	} //sets the id
 	
+	public void setName(String newName) {
+		name = newName;
+	} // sets name
 }
