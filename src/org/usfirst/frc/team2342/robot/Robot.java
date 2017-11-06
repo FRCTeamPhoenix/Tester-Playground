@@ -1,5 +1,15 @@
 package org.usfirst.frc.team2342.robot;
 
+import java.io.File;
+
+import java.io.IOException;
+
+import org.usfirst.frc.team2342.models.TalonReader;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -24,6 +34,17 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		try {
+			//JSONHandler jsonh = new JSONHandler("talons.json");
+			ObjectMapper mapper = new ObjectMapper(); 
+			File jsonF = new File("json/talons.json");
+			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			TalonReader talonsr = mapper.readValue(jsonF, TalonReader.class);
+			System.out.println(talonsr.getId() + " " + talonsr.getName() + " " + talonsr.getMaxPower());
+		}		
+		catch(Exception e) {
+			System.out.println(e);
+		}
 	}
 
 	/**

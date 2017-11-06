@@ -1,47 +1,12 @@
 {
-    "PortAssign" : {
-        "Talon" :
-        {
-            "types" : [],
-            "id" : []
-        },
-    
-        "Controllers" :
-        {
-                "types": [],
-                "id" : []
-        },
-    
-        "LimitSwitches" :
-        {
-                "types" : [],
-                "id" : []
-        }
+    "Person1" : {
+        "name" : "Joshua",
+        "age" : 17
     },
-
-    "RobotConstants" : {
-        "types" : [],
-        "id" : []
-    },
-
-    "DSConstants" : {
-        "GamepadButtons" : 12,
-        
-        "ButtonNames" : {
-            "types" : [],
-            "id" : []
-        },
-
-        "ControlBox" : {
-            "types" : [],
-            "id" : []
-        },
-
-        "DriverControl" : {
-            "types" : [],
-            "id" : []
-        },
-
+    
+    "Person2" : {
+        "name" : "Jonathan",
+        "age" : 14
     }
 }
 
