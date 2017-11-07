@@ -2,7 +2,7 @@ package org.usfirst.frc.team2342.models;
 
 
 public class TalonReader {
-	private int id = 1;
+	private int id = 0;
 	private String name = "gearTalon";
 	private float maxPower = 0.5f;
 	

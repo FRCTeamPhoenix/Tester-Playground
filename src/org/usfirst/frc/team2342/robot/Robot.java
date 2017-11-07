@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2342.robot;
 
 import org.usfirst.frc.team2342.models.JSONHandler;
+import org.usfirst.frc.team2342.models.Motor;
 import org.usfirst.frc.team2342.models.TalonReader;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -21,6 +22,10 @@ public class Robot extends IterativeRobot {
 	RobotDrive myRobot = new RobotDrive(0, 1);
 	Joystick stick = new Joystick(0);
 	Timer timer = new Timer();
+	JSONHandler jsonh = new JSONHandler("json/talons.json");
+	TalonReader tReader = new TalonReader();
+	SmartTalon m_motorT = new SmartTalon(0); 
+	Motor motor = new Motor(m_motorT, tReader.getID(), tReader.getName(), tReader.getMaxPower());
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -29,8 +34,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		try {
-			JSONHandler jsonh = new JSONHandler("json/talons.json");
-			TalonReader tReader = new TalonReader();
 			jsonh.read(tReader);
 			System.out.println(tReader.getID() + "  " + tReader.getMaxPower() + "   " + tReader.getName());
 		}		
@@ -83,5 +86,9 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();
+		motor.go();
+		Timer.delay(3.0d);
+		motor.stop();
+		Timer.delay(3.0d);
 	}
 }
