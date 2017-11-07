@@ -1,3 +1,5 @@
+package org.usfirst.frc.team2342.models;
+
 
 public class TalonReader {
 	private int id = 1;

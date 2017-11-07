@@ -4,7 +4,7 @@ import java.io.File;
 
 import java.io.IOException;
 
-import org.usfirst.frc.team2342.models.TalonReader;
+import org.usfirst.frc.team2342.models.*;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -35,12 +35,10 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		try {
-			//JSONHandler jsonh = new JSONHandler("talons.json");
-			ObjectMapper mapper = new ObjectMapper(); 
-			File jsonF = new File("json/talons.json");
-			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			TalonReader talonsr = mapper.readValue(jsonF, TalonReader.class);
-			System.out.println(talonsr.getId() + " " + talonsr.getName() + " " + talonsr.getMaxPower());
+			JSONHandler jsonh = new JSONHandler("json/talons.json");
+			TalonReader tReader = new TalonReader();
+			jsonh.read(tReader);
+			System.out.println(tReader.getID() + "  " + tReader.getMaxPower() + "   " + tReader.getName());
 		}		
 		catch(Exception e) {
 			System.out.println(e);

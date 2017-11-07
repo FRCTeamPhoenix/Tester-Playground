@@ -1,5 +1,4 @@
-package json;
-/*package org.usfirst.frc.team2342.models;
+package org.usfirst.frc.team2342.models;
 
 import java.io.File;
 
@@ -48,4 +47,3 @@ public class JSONHandler {
 		m_mapper.readValue(m_fileHandler, (Class<T>) t);
 	}
 }
-*/
