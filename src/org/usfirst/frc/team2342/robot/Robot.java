@@ -1,14 +1,7 @@
 package org.usfirst.frc.team2342.robot;
 
-import java.io.File;
-
-import java.io.IOException;
-
-import org.usfirst.frc.team2342.models.*;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.usfirst.frc.team2342.models.JSONHandler;
+import org.usfirst.frc.team2342.models.TalonReader;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
@@ -23,6 +16,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
+
 public class Robot extends IterativeRobot {
 	RobotDrive myRobot = new RobotDrive(0, 1);
 	Joystick stick = new Joystick(0);
