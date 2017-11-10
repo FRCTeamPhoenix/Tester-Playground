@@ -1,4 +1,4 @@
-package org.usfirst.frc.team2342.robot.talons;
+package org.usfirst.frc.team2342.robot;
 
 public class PIDGains {
 

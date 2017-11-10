@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
-
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,7 +41,7 @@ public class JSONHandler {
 		m_mapper.writeValue(m_fileHandler, t);
 	}
 	
-	public <T> void read(T t) throws JsonGenerationException, JsonMappingException, IOException {
-		m_mapper.readValue(m_fileHandler, (Class<T>) t);
+	public <T> T read(Class<T> pass) throws JsonGenerationException, JsonMappingException, IOException {
+		return m_mapper.readValue(m_fileHandler, pass);
 	}
 }
