@@ -18,7 +18,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * directory.
  */
 
-public class Robot extends IterativeRobot {
+public class Robot extends IterativeRobot 
+{
 	RobotDrive myRobot = new RobotDrive(0, 1);
 	Joystick stick = new Joystick(0);
 	Timer timer = new Timer();
@@ -32,12 +33,15 @@ public class Robot extends IterativeRobot {
 	 * used for any initialization code.
 	 */
 	@Override
-	public void robotInit() {
-		try {
+	public void robotInit() 
+	{
+		try 
+		{
 			jsonh.read(tReader);
 			System.out.println(tReader.getID() + "  " + tReader.getMaxPower() + "   " + tReader.getName());
 		}		
-		catch(Exception e) {
+		catch(Exception e) 
+		{
 			System.out.println(e);
 		}
 	}
@@ -46,7 +50,8 @@ public class Robot extends IterativeRobot {
 	 * This function is run once each time the robot enters autonomous mode
 	 */
 	@Override
-	public void autonomousInit() {
+	public void autonomousInit() 
+	{
 		timer.reset();
 		timer.start();
 	}
@@ -55,11 +60,14 @@ public class Robot extends IterativeRobot {
 	 * This function is called periodically during autonomous
 	 */
 	@Override
-	public void autonomousPeriodic() {
+	public void autonomousPeriodic() 
+	{
 		// Drive for 2 seconds
-		if (timer.get() < 2.0) {
+		if (timer.get() < 2.0) 
+		{
 			myRobot.drive(-0.5, 0.0); // drive forwards half speed
-		} else {
+		} else 
+		{
 			myRobot.drive(0.0, 0.0); // stop robot
 		}
 	}
@@ -69,14 +77,16 @@ public class Robot extends IterativeRobot {
 	 * mode
 	 */
 	@Override
-	public void teleopInit() {
+	public void teleopInit() 
+	{
 	}
 
 	/**
 	 * This function is called periodically during operator control
 	 */
 	@Override
-	public void teleopPeriodic() {
+	public void teleopPeriodic() 
+	{
 		myRobot.arcadeDrive(stick);
 	}
 
@@ -84,7 +94,8 @@ public class Robot extends IterativeRobot {
 	 * This function is called periodically during test mode
 	 */
 	@Override
-	public void testPeriodic() {
+	public void testPeriodic() 
+	{
 		LiveWindow.run();
 		motor.go();
 		Timer.delay(3.0d);
