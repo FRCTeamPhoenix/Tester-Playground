@@ -4,6 +4,10 @@ package org.usfirst.frc.team2342.models;
 
 import org.usfirst.frc.team2342.robot.PIDGains;
 
+//*******************************************************************************************
+// This is the TalonList class. It contains a talonList that will store talon information   *
+//*******************************************************************************************
+
 public class TalonList {
 	private static int len = 9;
 	public Talon[] talonList = new Talon[len];

@@ -1,6 +1,6 @@
 package org.usfirst.frc.team2342.robot;
 
-import org.usfirst.frc.team2342.models.JSONHandler;
+import org.usfirst.frc.team2342.handler.JSONHandler;
 import org.usfirst.frc.team2342.models.Motor;
 import org.usfirst.frc.team2342.models.TalonReader;
 

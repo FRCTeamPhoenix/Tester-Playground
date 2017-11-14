@@ -31,15 +31,15 @@ public class Talon {
 	
 	public int getID() {
 		return ID;
-	}
+	} //gets ID
 	
 	public PIDGains getDistance() {
 		return distance;
-	}
+	} //gets distance
 	
 	public PIDGains getVelocity() {
 		return velocity;
-	}
+	} //gets velocity
 	
 	public double getMaxForward() {
 		return maxForward;
@@ -47,35 +47,36 @@ public class Talon {
 	
 	public double getMaxReverse() {
 		return maxReverse;
-	}
+	} //gets maxReverse
 	
 	public boolean getInverted() {
 		return inverted;
-	}
+	} //gets inverted
 	
 	public void setID(int ID) {
 		this.ID = ID;
-	}
+	} //sets ID
 	
 	public void setDistance(PIDGains distance) {
 		this.distance = distance;
-	}
+	} //sets distance
+	
 	public void setVelocity(PIDGains velocity) {
 		this.velocity = velocity;
-	}
+	} //sets velocity
 
 	public void setMaxForward(double maxForward) {
 		this.maxForward = maxForward;
-	}
+	} //sets maxForward
 
 	public void setMaxReverse(double maxReverse) {
 		this.maxReverse = maxReverse;
-	}
+	} //sets maxReverse
 
 	public void setInverted(boolean inverted) {
 		this.inverted = inverted;
-	}
+	} //sets inverted
 	
-	}
-	
+}
+
 
