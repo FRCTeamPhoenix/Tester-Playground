@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 //*********************************************************************************************
 // The JSONHandler class essentially handles the JSON file. It initializes a new file to hold *
 // JSON values, and does other basic methods onto the file, such as writing to, or reading    *
-// from it.                                                                                        *
+// from it.                                                                                   *
 // ********************************************************************************************
 public class JSONHandler {
 	private String m_fname;
